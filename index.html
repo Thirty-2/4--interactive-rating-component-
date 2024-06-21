@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Interactive rating</title>
+  <style>
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body { background-color: hsl(216, 12%, 8%); }
+    #Container { position: relative; background-color: hsl(213, 19%, 18%); padding: 30px; border-radius: 30px;  max-width: 357px; margin: 100px auto;}
+
+    /* utilities */
+    h1 { font-size: 25px; color: hsl(0, 0%, 100%); padding: 25px 0;}
+    p { font-size: 15px; color: hsl(217, 12%, 63%);  }
+
+    .Img { background-color: hsl(213, 19%, 23%); padding: 10px; border-radius: 50%; text-align: center; width: 40px; }
+    img { width: 12px; }
+
+    #Numbers { display: flex; flex-direction: row; padding: 35px 0; }
+
+    h2 {color: hsl(0, 0%, 100%);; font-size: 15px; margin-right: 15px; background-color: hsl(213, 19%, 23%); padding: 15px 20px; border-radius: 50%; }
+    h2:hover { cursor: pointer; color: black; background-color: hsl(0, 0%, 100%); transition: .5s;}
+    
+
+    .A { padding: 10px 0; text-align: center; }
+
+    .A a { cursor: pointer; color: black; background-color: hsl(25, 97%, 53%); text-decoration: none; padding: 10px 40%; border-radius: 40px; font-size: 15px; }
+    .A a:hover { color: black; background-color: hsl(0, 0%, 100%); transition: .5s; }
+
+    footer { position: absolute; bottom: 0; width: 100%; background-color: hsla(220, 20%, 50%, 0.268); font-size: 20px; text-align: center; padding: 5px;}
+
+    footer a { text-decoration: none; color: black; }
+    footer a:hover { color: white; }
+
+    @media screen and (max-width:350px) {
+      h2 {margin-right: 7px; }
+    }
+
+  </style>
+</head>
+<body>
+  <div id="Container">
+        <div class="Img">
+          <img src="images/icon-star.svg" alt="">
+        </div>
+
+        <h1>How Did We Do?</h1>
+
+        <p>Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
+    <div id="Numbers">
+        <h2>1</h2>
+        <h2>2</h2>
+        <h2>3</h2>
+        <h2>4</h2>
+        <h2>5</h2>
+    </div>
+    <div class="A">
+      <a href="thankyou.html">SUBMIT</a>
+    </div>
+  </div>
+  <footer>
+    Coded by <a href="#">&copy;sagie</a>.
+  </footer>
+
+
+
+  <script>
+  const numbers = document.getElementById("Numbers");
+  const h2s = numbers.getElementsByTagName("h2");
+  
+  let previouslySelected = null;
+
+  for (let i = 0; i < h2s.length; i++) {
+    h2s[i].addEventListener("click", function() {
+      // If an element was previously selected, remove the "orangeBg" class
+      if (previouslySelected) {
+        previouslySelected.style.background ="hsl(213, 19%, 23%)";
+      }
+      // Add the "orangeBg" class to the newly selected element
+      this.style.background = "hsl(25, 97%, 53%";
+      // Update the previouslySelected variable
+      previouslySelected = this;
+    });
+  }
+  </script>
+  <script>
+    document.getElementById('demo').innerHTML = 'Hello JavaScript';
+  </script>
+
+</body>
+</html>

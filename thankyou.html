@@ -4,47 +4,42 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Interactive rating</title>
-  <style>
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body { background-color: hsl(216, 12%, 8%); }
-    #Container { position: relative; background-color: hsl(213, 19%, 18%); padding: 25px; border-radius: 30px; max-width: 357px; margin: 100px auto;}
-
-    /* utilities */
-    h1 { font-size: 25px; color: hsl(0, 0%, 100%); padding: 25px 0; text-align: center;}
-    p { font-size: 15px; color: hsl(217, 12%, 63%); text-align: center; }
-    img { position: relative; right: -35px; width: 70%; padding: 20px 10px;}
-
-    footer { position: absolute; bottom: 0; width: 100%; background-color: hsla(220, 20%, 50%, 0.268); font-size: 20px; text-align: center; padding: 5px;}
-
-    footer a { text-decoration: none; color: black; }
-    footer a:hover { color: white; }
-
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <title>rating</title>
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
-  <div id="Container">
-        <div class="Img">
-          <img src="images/illustration-thank-you.svg" alt="">
-        </div>
-        <p class="Select">
-            You selected  out of 5
-        </p>
-        <h1>Thank you!</h1>
 
-        <p>We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!</p>
-    
-    
+  <div class="main-container">
+    <img src="images/icon-star.svg" alt="">
+    <h1>How did we do?</h1>
+    <p>please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
+    <ul>
+      <li><button class="btn">1</button></li>
+      <li><button class="btn">2</button></li>
+      <li><button class="btn">3</button></li>
+      <li><button class="btn">4</button></li>
+      <li><button class="btn">5</button></li>
+    </ul>
+    <button class="btn-submit" id="submit">SUBMIT</button>
   </div>
+
+
+  
+  <div class="thank-you hidden">
+    <img id="home" src="images/illustration-thank-you.svg" alt="">
+
+    <p class="gray">you selected 
+      <span id="rating">5</span> out of 5</p>
+
+    <h2>Thank you!</h2>
+    <p>We appreciate you taking time to give a rating. If you ever need more support, don't hesitate to get in touch!</p>
+  </div>
+
   <footer>
     Coded by <a href="#">&copy;sagie</a>.
   </footer>
-  <script>
 
-  </script>
-  
+  <script src="index.js"></script>
 </body>
 </html>

@@ -7,7 +7,7 @@ p { line-height: 1.8; }
 
 ul { list-style-type: none; }
 
-.main-container, .thank-you { background-color: hsl(213, 19%, 18%); padding: 1.5rem; border-radius: 0.625rem; max-width: 400px; }
+.main-container, .thank-you { background-color: hsl(213, 19%, 18%); padding: 1.5rem; border-radius: 0.625rem; max-width: 400px;; }
 
 .main-container img { background-color: hsl(213, 20%, 22%); padding: 0.5rem; border-radius: 50%; } 
 
@@ -46,3 +46,7 @@ footer { background-color: hsla(220, 20%, 50%, 0.268); font-size: 20px; text-ali
 
 footer a { text-decoration: none; color: rgb(248, 248, 248); }
 footer a:hover { color: black; }
+
+@media screen and (max-width:330px) {
+    .main-container ul li button { width: 2.5rem; height: 2.5rem; }
+}

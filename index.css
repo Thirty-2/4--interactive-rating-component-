@@ -41,11 +41,6 @@ ul { list-style-type: none; }
 
 .hidden { display: none; }
 
-/* footer */
-footer { background-color: hsla(220, 20%, 50%, 0.268); font-size: 20px; text-align: center; padding: 5px; margin-top: 40px; color: #fff; border-radius: 30px;}
-
-footer a { text-decoration: none; color: rgb(248, 248, 248); }
-footer a:hover { color: black; }
 
 @media screen and (max-width:330px) {
     .main-container ul li button { width: 2.5rem; height: 2.5rem; }
